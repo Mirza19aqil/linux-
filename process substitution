@@ -1,0 +1,8 @@
+process substitution is a bash feature that lets you use the output of a command as if it were a file
+syntax :
+    <(command)
+    or
+    >(command)
+
+diff <(cat file1 | sort) <(cat file2 | sort)
+cat <(echo hello) equivalent to hello
