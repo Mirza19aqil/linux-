@@ -1,0 +1,8 @@
+grep is not the only way to match patterns
+syntax for matching and replacing is : sed "s/oldword/newword/g"
+s/ for substitute
+oldword/ : the word to replace
+newword/ : the replacement for old word
+/g for global (search for all occurrences of the pattern)
+
+
