@@ -1,0 +1,11 @@
+1) Semicolon : The easiest way to chain a command is ; in most context ; seperate commands in a similar way to how to enter seperate lines
+echo "hello" > linux ; cat linux
+
+2) && : The && operator allows you to run a second command only if first command is succeed.
+  command1 && command2
+it means run command1 and if it succeed , then run command2
+
+3) || : this operator allows you to run a command only if first command fails.
+  command1 || command2
+ it means run command1 and if it fails run commmand2
+
