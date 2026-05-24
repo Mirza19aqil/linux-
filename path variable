@@ -1,0 +1,30 @@
+Have you ever thought "how does the shell find ls? " is fairly simple. There is a special shell variable called PATH , that stores bunsh of directoory path in which the shell will search programs corrospondings
+to commands, if you blank out the variable things go badly.
+
+hacker@linux:~$ ls
+Desktop    Downloads  Pictures  Templates
+Documents  Music      Public    Videos
+hacker@linux:~$ PATH=""
+hacker@linux:~$ ls
+bash: ls: No such file or directory
+hacker@linux:~$
+
+Now what about doing something useful with PATH 
+
+Let's explore how we would, for example, add a new directory of programs to our command repertoire. Recall that PATH stores a list of directories to find commands in and, for commands in nonstandard places, 
+we must typically execute them via their path:
+
+hacker@linux:~$ ls /home/hacker/scripts
+goodscript	badscript	okayscript
+hacker@linux:~$ goodscript
+bash: goodscript: command not found
+hacker@linux:~$ /home/hacker/scripts/goodscript
+YEAH! This is the best script!
+hacker@linux:~$
+If you maintain useful scripts that you want to be able to launch by bare name, this is annoying. However, by adding directories to or replacing directories in this list, you can expose these programs to be 
+launched using their bare name! For example:
+
+hacker@linux:~$ PATH=/home/hacker/scripts
+hacker@linux:~$ goodscript
+YEAH! This is the best script!
+hacker@linux:~$
