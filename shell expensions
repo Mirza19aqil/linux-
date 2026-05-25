@@ -1,0 +1,11 @@
+Brace expansions :
+  Brace expension is mechanism to generate arbitary string sharing a common prefix and suffix , either of which can be empty
+  bash$ echo a{d,c,b}e
+  ade ace abe
+
+Shell parameter expansion: 
+  The '$' character introduces parameter expansion, command substitution or airthmetic expansion. The basic form of parameter expansion is ${parameter}, which substitutes the value of parameter.
+  $ string=01234567890abcdefgh
+  $ echo ${string:7}
+  7890abcdefgh
+  
