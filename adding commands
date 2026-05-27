@@ -1,0 +1,11 @@
+how to create your own command. suppose you wanna create a command name begh which is cat /flag.
+step 1: create a directory for your command
+  mkdir ~/mybin
+step 2: create the begh script
+  echo '#!/bin/bash
+  cat /flag' > ~/mybin/begh
+step 3: make it executable
+  chmod +x ~/mybin/begh
+step 4: Put your directory first in a path
+  export PATH=~/mybin:$PATH
+step 5: run command
